@@ -2,11 +2,13 @@
 
 const {exec, spawn} = require('child_process')
 
-const child = spawn('cat btata.txt', {
+exec('cat batata.txt', (err,stdout) => { console.log('stdout =>', stdout)})
+
+const child = spawn('cat batata.txt', {
     shell: true
 });
 const grep = spawn('grep batata', {
-    shell: true
+    shell: true,
 })
 
 child.stdout.pipe(grep.stdin)
@@ -18,4 +20,5 @@ child.stdout.on('data', (chunk) => {
 grep.stdout.on('data', (chunk) => {
     console.log('gep:', chunk.toString())
 })
+
 
