@@ -1,5 +1,5 @@
 {
-  "name": "unittest",
+  "name": "reflect",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,9 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^20.10.7",
-    "axios": "^1.6.2"
-  }
+  "license": "ISC"
 }

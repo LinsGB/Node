@@ -14,13 +14,13 @@ const writeBatata =() => {
 const writeBatataIngles = async () => {
     await pipeline(
         fs.createReadStream('./batata.txt'),
-        // async function* (source) {
-        //     source.setEncoding('utf8');
-        //     let futurePotato = ''   
-        //     for await (const data of source) {
-        //         yield data.replaceAll(/batata/g, 'batata inglesa ')
-        //     }
-        // },
+        async function* (source) {
+            source.setEncoding('utf8');
+            let futurePotato = ''   
+            for await (const data of source) {
+                yield data.replaceAll(/batata/g, 'batata inglesa ')
+            }
+        },
         fs.createWriteStream('./batata_inglesa.txt')
         )
 }

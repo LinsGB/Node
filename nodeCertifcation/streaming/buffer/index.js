@@ -1,8 +1,10 @@
 const {Buffer} = require('buffer')
-const EventEmitter = require('events')
 
 const bufferTest = Buffer.from([1,2,3,4,5,6,7,8,9], 'utf8')
+const intBuffer = Buffer.from('123')
 
+console.log('intBuffer => ', intBuffer)
+console.log('intBuffer => ', intBuffer.toString())
 
 const arrayTest = new Int8Array(bufferTest)
 console.log(arrayTest)
